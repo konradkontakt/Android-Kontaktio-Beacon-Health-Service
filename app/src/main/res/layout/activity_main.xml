@@ -11,21 +11,19 @@
     tools:context="com.example.konradbujak.kontaktiobeaconhealthservice.MainActivity">
 
     <Button
-        android:text="Button"
+        android:text="START SERVICE"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="101dp"
-        android:id="@+id/start_button"
-        tools:text="START SERVICE" />
+        android:id="@+id/start_button" />
 
     <Button
-        android:text="Button"
+        android:text="STOP SERVICE"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/start_button"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="131dp"
-        android:id="@+id/stop_button"
-        tools:text="STOP SERVICE" />
+        android:id="@+id/stop_button"/>
 </RelativeLayout>

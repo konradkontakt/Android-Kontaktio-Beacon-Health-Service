@@ -41,6 +41,9 @@ public class MainActivity extends AppCompatActivity {
                 stopService(i);
                 if (stopService(i))
                     Log.i(TAG, "Service stopped" );
+                else
+                    Log.i(TAG, "Service cannot stop" );
+
             }
         });
         start.setOnClickListener(new View.OnClickListener() {
