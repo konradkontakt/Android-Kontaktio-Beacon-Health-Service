@@ -16,9 +16,6 @@ import com.kontakt.sdk.android.common.profile.IBeaconRegion;
 import com.kontakt.sdk.android.common.profile.IEddystoneDevice;
 import com.kontakt.sdk.android.common.profile.IEddystoneNamespace;
 
-/**
- * Created by Konrad.Bujak on 19.10.2016.
- */
 
 public class Service extends IntentService {
     private static final String TAG = "MyActivity";
@@ -28,7 +25,7 @@ public class Service extends IntentService {
     private ProximityManager KontaktioManager;
     @Override
     protected void onHandleIntent(Intent intent) {
-        //This is the test API-KEY but to use our sdk properly you have to add here your API KEY
+        //to use our sdk properly you have to add here your API KEY
         KontaktSDK.initialize("Put Here your secret API Key");
         if (KontaktSDK.isInitialized())
             Log.i(TAG, "SDK initialised");
