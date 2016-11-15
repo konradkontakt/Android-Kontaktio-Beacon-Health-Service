@@ -29,7 +29,7 @@ public class Service extends IntentService {
     @Override
     protected void onHandleIntent(Intent intent) {
         //This is the test API-KEY but to use our sdk properly you have to add here your API KEY
-        KontaktSDK.initialize("QcZNRdfovwLcPVFAvbHgacOnfGBkcHco");
+        KontaktSDK.initialize("Put Here your secret API Key");
         if (KontaktSDK.isInitialized())
             Log.i(TAG, "SDK initialised");
         KontaktioManager = new ProximityManager(this);
