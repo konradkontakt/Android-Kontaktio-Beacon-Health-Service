@@ -5,6 +5,7 @@ import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +14,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
     private static final int MY_PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION = 0;
@@ -39,60 +42,62 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 stopService(i);
-                if (stopService(i))
-                    Log.i(TAG, "Service stopped" );
+                if (stopService(i)) {
+                    Log.i(TAG, "Service stopped");
+                    showToast("Service Stopped");
+                }
                 else
                     Log.i(TAG, "Service cannot stop" );
-
             }
         });
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startService(i);
-                if (isMyServiceRunning(Service.class))
-                    Log.i(TAG, "Service started" );
+                checkPermissionAndStart();
+                if (isMyServiceRunning(Service.class)) {
+                    Log.i(TAG, "Service started");
+                    showToast("Service Started");
+                }
             }
-        });
-        //For devices with Android v6.0+ we need to ask for permission as it is required by Kontakt.io SDK
-        if (ContextCompat.checkSelfPermission(this,
-                Manifest.permission.ACCESS_FINE_LOCATION)
-                != PackageManager.PERMISSION_GRANTED)
-        {
-            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
-                    Manifest.permission.ACCESS_FINE_LOCATION))
-            {
-                Log.i(TAG, "We have already permission" );
-            }
-            else {
-                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
-                        MY_PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION);
-                // MY_PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION is an
-                // app-defined int constant. The callback method gets the
-                // result of the request.
-            }
+        });}
+        // Checking the permissions for the Android OS 6.0 +
+    private void checkPermissionAndStart() {
+        int checkSelfPermissionResult = ContextCompat.checkSelfPermission(this, Arrays.toString(new String[]{Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.READ_EXTERNAL_STORAGE}));
+        if (PackageManager.PERMISSION_GRANTED == checkSelfPermissionResult) {
+            //already granted
+            Log.d(TAG,"Permission already granted");
+            startService(i);
+        }
+        else {
+            //request permission
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.READ_EXTERNAL_STORAGE}, 100);
+            Log.d(TAG,"Permission request called");
         }
     }
-
     @Override
-    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
-        switch (requestCode) {
-            case MY_PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION: {
-                // If request is cancelled, the result arrays are empty.
-                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    //startService(new Intent(getBaseContext(), Service.class));
-                    Log.i(TAG, "Permission granted" );
-                } else {
-                    // permission denied, boo!
-                    Log.i(TAG, "Permission denied" );
-                    Context context = getApplicationContext();
-                    CharSequence text = "You have to grant permission in order to use Kontakt.io Beacon Health";
-                    int duration = Toast.LENGTH_LONG;
-                    Toast toast = Toast.makeText(context, text, duration);
-                    toast.show();
-                }
-                return;
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            if (100 == requestCode) {
+                Log.d(TAG,"Permission granted");
+                startService(i);
             }
+        } else
+        {
+            Log.d(TAG,"Permission not granted");
         }
+    }
+    // Toasts on device
+    private void showToast(final String message) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Toast.makeText(MainActivity.this, message, Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+    @Override
+    protected void onDestroy() {
+        stopService(i);
+        super.onDestroy();
     }
 }
