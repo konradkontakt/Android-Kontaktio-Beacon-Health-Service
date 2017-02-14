@@ -3,13 +3,13 @@ package com.example.konradbujak.kontaktiobeaconhealthservice;
 import android.app.IntentService;
 import android.content.Intent;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.kontakt.sdk.android.ble.configuration.ActivityCheckConfiguration;
+import com.kontakt.sdk.android.ble.configuration.ScanMode;
 import com.kontakt.sdk.android.ble.configuration.ScanPeriod;
-import com.kontakt.sdk.android.ble.configuration.scan.ScanMode;
 import com.kontakt.sdk.android.ble.connection.OnServiceReadyListener;
 import com.kontakt.sdk.android.ble.manager.ProximityManager;
+import com.kontakt.sdk.android.ble.manager.ProximityManagerFactory;
 import com.kontakt.sdk.android.ble.manager.listeners.ScanStatusListener;
 import com.kontakt.sdk.android.ble.manager.listeners.simple.SimpleEddystoneListener;
 import com.kontakt.sdk.android.ble.manager.listeners.simple.SimpleIBeaconListener;
@@ -41,33 +41,34 @@ public class Service extends IntentService {
         KontaktSDK.initialize(API_KEY);
         if (KontaktSDK.isInitialized())
             Log.i(TAG, "SDK initialised");
-        KontaktioManager = new ProximityManager(this);
+        KontaktioManager = ProximityManagerFactory.create(this);
         KontaktioManager.configuration().monitoringEnabled(true)
                 .activityCheckConfiguration(ActivityCheckConfiguration.DISABLED)
                 .deviceUpdateCallbackInterval(3000)
                 .scanMode(ScanMode.BALANCED)
                 .scanPeriod(ScanPeriod.RANGING);
         KontaktioManager.setScanStatusListener(createScanStatusListener());
-        //iBeacon scanner ( listener)
+        //iBeacon scanner (listener)
         KontaktioManager.setIBeaconListener(new SimpleIBeaconListener() {
             @Override
             public void onIBeaconDiscovered(IBeaconDevice ibeacon, IBeaconRegion region) {
                 if(ibeacon.getUniqueId()!=null)
-                    Log.d(TAG, "IBeacon: " + ibeacon.getUniqueId());
+                    Log.d(TAG, "IBeacon: " + ibeacon.getUniqueId()+ " RSSI: " + ibeacon.getRssi());
             }
         });
-        //Eddystone scanner ( listener)
+        //Eddystone scanner (listener)
         KontaktioManager.setEddystoneListener(new SimpleEddystoneListener() {
             @Override
             public void onEddystoneDiscovered(IEddystoneDevice eddystone, IEddystoneNamespace namespace) {
                 if(eddystone.getUniqueId()!=null)
-                    Log.d(TAG, "Eddystone: " + eddystone.getUniqueId());            }
+                    Log.d(TAG, "Eddystone: " + eddystone.getUniqueId()+ " RSSI: " + eddystone.getRssi());            }
         });
-        KontaktioManager.setKontaktSecureProfileListener((new SimpleSecureProfileListener(){
+        // Beacon Pro scanner (listener)
+        KontaktioManager.setSecureProfileListener((new SimpleSecureProfileListener(){
             @Override
             public void onProfileDiscovered(ISecureProfile profile) {
                 i++;
-                Log.d(TAG, "Beacon Pro: " + profile.getUniqueId());
+                Log.d(TAG, "Beacon Pro: " + profile.getUniqueId() + " RSSI: " + profile.getRssi());
 
             }
         }));
