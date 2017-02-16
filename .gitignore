@@ -1,9 +1,9 @@
 *.iml
 *.ipr
 *.iws
-.gradle/
+gradle/
 build/
-.idea/
+idea/
 import-summary.txt
 # generated files
 bin/
