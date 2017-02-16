@@ -26,7 +26,7 @@ You can also only copy the code from the java files but than remember to add in 
 
 ```java
 dependencies {
-    compile 'com.kontaktio:sdk:3.2.0'
+    compile 'com.kontaktio:sdk:3.2.1'
 }
 ```
 

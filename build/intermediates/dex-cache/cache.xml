@@ -12,15 +12,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Admin\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.2.0\f7873a2ebde246a45c2a8d6f3247108b4c88a879\okhttp-3.2.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.3"
-        sha1="f7873a2ebde246a45c2a8d6f3247108b4c88a879">
-        <dex dex="C:\Users\Admin\Documents\AndroidStudioProjects\BeaconHealthService\app\build\intermediates\pre-dexed\debug\okhttp-3.2.0_f2bd19082c797d9c56ecfd92c39d0d37bb0caa97.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="C:\Users\Admin\Documents\AndroidStudioProjects\BeaconHealthService\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -57,39 +48,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Admin\Documents\AndroidStudioProjects\BeaconHealthService\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.3"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\Admin\Documents\AndroidStudioProjects\BeaconHealthService\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.2.1_c659a73c5323aa49a3461bb55bf8d2f39564c3c3.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Admin\Documents\AndroidStudioProjects\BeaconHealthService\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.3"
-        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
-        <dex dex="C:\Users\Admin\Documents\AndroidStudioProjects\BeaconHealthService\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_d123153270e34d4130181e57cc38279302c3009b.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="C:\Users\Admin\Documents\AndroidStudioProjects\BeaconHealthService\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
         jumboMode="false"
         optimize="true"
         revision="24.0.3"
         sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
         <dex dex="C:\Users\Admin\Documents\AndroidStudioProjects\BeaconHealthService\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_9f06ecab7c75f9ed81eab330a1c448e8db6b4c93.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Admin\Documents\AndroidStudioProjects\BeaconHealthService\app\build\intermediates\exploded-aar\com.kontaktio\sdk\3.2.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.3"
-        sha1="2b9d649c69f2d04adc1d8ac734a736b51316d97c">
-        <dex dex="C:\Users\Admin\Documents\AndroidStudioProjects\BeaconHealthService\app\build\intermediates\pre-dexed\debug\com.kontaktio-sdk-3.2.0_1d41d11b2fa55824e00b9fe57b628376d7998607.jar" />
     </item>
     <item
         is-multidex="false"
@@ -102,21 +66,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Admin\Documents\AndroidStudioProjects\BeaconHealthService\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        jar="C:\Users\Admin\Documents\AndroidStudioProjects\BeaconHealthService\app\build\intermediates\exploded-aar\com.kontaktio\sdk\3.2.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="24.0.3"
-        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
-        <dex dex="C:\Users\Admin\Documents\AndroidStudioProjects\BeaconHealthService\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-24.2.1_1ec5ef560db04ced826aadf9ecfeeefb5ccc2fdc.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Admin\Documents\AndroidStudioProjects\BeaconHealthService\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.3"
-        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
-        <dex dex="C:\Users\Admin\Documents\AndroidStudioProjects\BeaconHealthService\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-24.2.1_c010b8e7b497569b8afefcb438163a8d80c65659.jar" />
+        sha1="bbb2fd671aa043f64a1dfb06ab02c87fc50dc37e">
+        <dex dex="C:\Users\Admin\Documents\AndroidStudioProjects\BeaconHealthService\app\build\intermediates\pre-dexed\debug\com.kontaktio-sdk-3.2.1_2c20897478c704191ca199e6eaebb99075e815a3.jar" />
     </item>
     <item
         is-multidex="false"
@@ -138,6 +93,69 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\Admin\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.0.0\5c06d197fb7fa875ad452f562e3310dd9949d066\retrofit-2.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="5c06d197fb7fa875ad452f562e3310dd9949d066">
+        <dex dex="C:\Users\Admin\Documents\AndroidStudioProjects\BeaconHealthService\app\build\intermediates\pre-dexed\debug\retrofit-2.0.0_f697a2aa7478279fb9a52bc959714068173ae81a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Admin\Documents\AndroidStudioProjects\BeaconHealthService\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="C:\Users\Admin\Documents\AndroidStudioProjects\BeaconHealthService\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-24.2.1_24ff30120aec7a6706b3a01c3d7afc080fdeb66d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Admin\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.2.0\f7873a2ebde246a45c2a8d6f3247108b4c88a879\okhttp-3.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="f7873a2ebde246a45c2a8d6f3247108b4c88a879">
+        <dex dex="C:\Users\Admin\Documents\AndroidStudioProjects\BeaconHealthService\app\build\intermediates\pre-dexed\debug\okhttp-3.2.0_f2bd19082c797d9c56ecfd92c39d0d37bb0caa97.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Admin\Documents\AndroidStudioProjects\BeaconHealthService\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\Admin\Documents\AndroidStudioProjects\BeaconHealthService\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.2.1_c659a73c5323aa49a3461bb55bf8d2f39564c3c3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Admin\Documents\AndroidStudioProjects\BeaconHealthService\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="C:\Users\Admin\Documents\AndroidStudioProjects\BeaconHealthService\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_d123153270e34d4130181e57cc38279302c3009b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Admin\Documents\AndroidStudioProjects\BeaconHealthService\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="C:\Users\Admin\Documents\AndroidStudioProjects\BeaconHealthService\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-24.2.1_1ec5ef560db04ced826aadf9ecfeeefb5ccc2fdc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Admin\Documents\AndroidStudioProjects\BeaconHealthService\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="C:\Users\Admin\Documents\AndroidStudioProjects\BeaconHealthService\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-24.2.1_c010b8e7b497569b8afefcb438163a8d80c65659.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\Admin\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\converter-gson\2.0.0\49eb3ad545e7701234e4dd83db8dc1344b577f23\converter-gson-2.0.0.jar"
         jumboMode="false"
         optimize="true"
@@ -156,15 +174,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Admin\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.0.0\5c06d197fb7fa875ad452f562e3310dd9949d066\retrofit-2.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.3"
-        sha1="5c06d197fb7fa875ad452f562e3310dd9949d066">
-        <dex dex="C:\Users\Admin\Documents\AndroidStudioProjects\BeaconHealthService\app\build\intermediates\pre-dexed\debug\retrofit-2.0.0_f697a2aa7478279fb9a52bc959714068173ae81a.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="C:\Users\Admin\Documents\AndroidStudioProjects\BeaconHealthService\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -180,15 +189,6 @@
         revision="24.0.3"
         sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
         <dex dex="C:\Users\Admin\Documents\AndroidStudioProjects\BeaconHealthService\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-24.2.1_8457c938b80be40a632efbb42150bddec12463de.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Admin\Documents\AndroidStudioProjects\BeaconHealthService\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.3"
-        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
-        <dex dex="C:\Users\Admin\Documents\AndroidStudioProjects\BeaconHealthService\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-24.2.1_24ff30120aec7a6706b3a01c3d7afc080fdeb66d.jar" />
     </item>
 
 </items>
